@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/React/React16-18/demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vue2Test/vue2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vueTest/vue2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vueTest/vue3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/二次封装组件/myComponents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/天气预报APP/weather-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/封装指令/custom-instruction" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/面试/reactTab/tab-react" vcs="Git" />
+  </component>
+</project>

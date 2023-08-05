@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>v-model Example</title>
+</head>
+<body>
+<input id="myInput" type="text"/>
+<script>
+    // 手写简化版的v-model指令
+    function createVModel(element, data, property) {
+        // 设置输入框初始值为data中对应属性的值
+        element.value = data[property];
+
+        // 监听输入框的input事件
+        element.addEventListener('input', function (event) {
+            // 更新data中对应属性的值为输入框的值
+            data[property] = event.target.value;
+        });
+
+        // 监听data中对应属性的变化
+        Object.defineProperty(data, property, {
+            get: function () {
+                return element.value; // 返回输入框的值
+            },
+            set: function (newValue) {
+                element.value = newValue; // 更新输入框的值
+            }
+        });
+    }
+
+    // 示例使用
+    const data = {
+        name: 'John'
+    };
+
+    // 测试
+    setTimeout(() => {
+        Object.assign(data, {
+            name: 'Judy'
+        })
+        console.log(data.name)
+    }, 3000)
+
+    const inputElement = document.getElementById('myInput');
+    // 使用手写的v-model指令
+    createVModel(inputElement, data, 'name');
+</script>
+</body>
+</html>

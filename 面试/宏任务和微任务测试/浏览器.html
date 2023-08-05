@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>hello world</p>
+<script>
+    // console.log('start')
+    // setTimeout(()=>{
+    //     console.log('timeout')
+    // })
+    // Promise.resolve().then(()=>{
+    //     console.log('promise then')
+    // })
+    // console.log('end')
+
+    //DOM操作
+    const p=document.createElement('p')
+    p.innerHTML='new paragraph'
+    document.body.appendChild(p)
+    const list = document.getElementsByTagName('p')
+    console.log('length-----',list.length)
+
+    //宏任务和微任务执行测试
+    console.log('start')
+    setTimeout(()=>{
+        const list = document.getElementsByTagName('p')
+        console.log('length-----',list.length)
+        console.log('timeout')
+        alert('宏任务 timeout')
+    })
+    Promise.resolve().then(()=>{
+        const list = document.getElementsByTagName('p')
+        console.log('length-----',list.length)
+        console.log('promise then')
+        alert('微任务 promise')
+    })
+    console.log('end')
+</script>
+</body>
+</html>

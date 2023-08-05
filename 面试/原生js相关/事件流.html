@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id='one'>
+  <div id='two'>
+    <div id='three'>
+      <div id='four'>
+        Event
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    var one=document.getElementById('one');
+    var two=document.getElementById('two');
+    var three=document.getElementById('three');
+    var four=document.getElementById('four');
+    one.addEventListener('click',function(){
+        alert('one');
+    },false);
+    two.addEventListener('click',function(){
+        alert('two');
+    },false); //如果都改为true后，弹框的顺序就变成了one two three four
+    three.addEventListener('click',function(){
+        alert('three');
+    },false);
+    four.addEventListener('click',function(){
+        alert('four');
+    },false);
+</script>
+</body>
+</html>

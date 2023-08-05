@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container1 {
+            width: 200px;
+            height: 200px;
+            margin: 5px auto;
+            border: 5px solid black;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container2 {
+            width: 200px;
+            height: 200px;
+            margin: 5px auto;
+            border: 5px solid black;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #container3{
+            width: 200px;
+            height: 200px;
+            margin: 5px auto;
+            border: 5px solid black;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background: black;
+            border-radius: 50%;
+        }
+        .item1{
+            align-self: center;
+        }
+        .item2{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+<div id="container1">
+    <div class="item"></div>
+</div>
+<div id="container2">
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+<div id="container3">
+    <div class="item"></div>
+    <div class="item item1"></div>
+    <div class="item item2"></div>
+</div>
+</body>
+</html>

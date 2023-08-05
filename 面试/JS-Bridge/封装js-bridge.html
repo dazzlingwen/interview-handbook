@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-bridge</title>
+</head>
+<body>
+<p>js-bridge</p>
+<script>
+    const sdk = {
+        invoke(url, data = {}, onSuccess, onError) {
+            const iframe = document.createElement('iframe')
+            iframe.style.visibility = 'hidden'
+            document.body.appendChild(iframe)
+            iframe.onload = () => {
+                const content = iframe.contentWindow.document.body.innerHTML
+                onSuccess(JSON.parse(content)) //格式化一下content
+                iframe.remove()
+            }
+            iframe.onError = () => {
+                onError()
+                iframe.remove()
+            }
+            iframe.src = `my-app-name://${url}?data=${JSON.stringify(data)}`
+        },
+        //假设fn1为打开扫一扫
+        fn1(data, onSuccess, onError) {
+            this.invoke('api/fn1', data, onSuccess, onError)
+        },
+        //fn2又是另外的功能...
+        fn2(data, onSuccess, onError) {
+            this.invoke('api/fn2', data, onSuccess, onError)
+        },
+    }
+    //调用
+    sdk.fn1()
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let data = new Date().getTime()   //先将此时的时间转化为毫秒
+    console.log(data)
+    let new_data = new Date(data + 7*24*60*60*1000)  //将过期时间设置为7天后
+    // toUTCString() 是将时间根据世界时转换为字符串
+    document.cookie = 'name=张三;' + 'expires=' + new_data.toUTCString()
+</script>
+</body>
+</html>

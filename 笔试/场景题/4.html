@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSE测试</title>
+    <style>
+        .text{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="nihao" id="text">
+</body>
+<script>
+    var val = document.getElementById('text').value;
+    async function getChatGPTAccessToken(){
+        const resp = await fetchSSE('https://chat.openai.com/api/auth/session')
+        console.log(resp)
+        if (resp.status === 403) {
+            throw new Error('CLOUDFLARE')
+        }
+    }
+    setTimeout(()=>{
+        getChatGPTAccessToken()
+        document.getElementById('text').value = val+'xxxxx'
+    },5000)
+</script>
+</html>

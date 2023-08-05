@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--如下代码，请问 div1 的 offsetWidth 是多大？-->
+    <style>
+        #div1 {
+            width: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    let el = document.getElementById('div1');
+    console.log(el.offsetWidth);
+</script>
+</body>
+</html>

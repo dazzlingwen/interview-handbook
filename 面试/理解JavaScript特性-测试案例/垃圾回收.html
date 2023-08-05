@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="foo"></div>
+<div id="bar"></div>
+<script>
+    const e1=document.getElementById('foo')
+    const e2=document.getElementById('bar')
+    const arr=[
+        [e1,'foo'],
+        [e2,'bar']
+    ]
+    arr[0]=null;
+    arr[1]=null;
+</script>
+</body>
+</html>

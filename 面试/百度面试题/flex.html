@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .father {
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            background: indianred;
+            display: flex;
+            flex-flow: row nowrap;
+            align-content: center;
+        }
+
+        .son {
+            width: 150px;
+            height: 150px;
+            background-color: #61dafb;
+            margin: 5px;
+        }
+
+        .son-one {
+            background-color: palevioletred;
+            order: -1;
+            flex-grow: 2;
+        }
+
+        .son-two {
+            background-color: goldenrod;
+            order: 0;
+            flex-grow: 1;
+        }
+
+        .son-three {
+            order: 1;
+            flex-shrink: 0;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son son-three"></div>
+    <div class="son son-two"></div>
+    <div class="son son-one"></div>
+</div>
+</body>
+</html>
