@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/React/React16-18/demo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vue2Test/vue2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vueTest/vue2" vcs="Git" />
