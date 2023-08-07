@@ -41,6 +41,9 @@
 ## queue
  - [最近请求次数](https://github.com/dazzlingwen/interview-handbook/blob/master/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/queue/%E6%9C%80%E8%BF%91%E8%AF%B7%E6%B1%82%E6%AC%A1%E6%95%B0.js)
  - [队列](https://github.com/dazzlingwen/interview-handbook/blob/master/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/queue/%E9%98%9F%E5%88%97.js)
+## linklist
+ - [JSON](https://github.com/dazzlingwen/interview-handbook/blob/master/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/linklist/JSON.js)
+ - [](https://github.com/dazzlingwen/interview-handbook/blob/master/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/linklist/instanceof%E5%8E%9F%E7%90%86.js)
 # 注意事项
  食用过程中大家可能会看到有个别文件没有注释，可能当时写的时候比较仓促，忘了注释，笔者在查缺补漏了，尽量让大家都能够看得懂，如果有看不懂的题或者是有误的地方，也欢迎大家在评论区指正。
 
