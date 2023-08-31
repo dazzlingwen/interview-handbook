@@ -8,6 +8,7 @@ class MyPromise {
      * constructor 关键字用于在类定义块内部创建 类 的 构造函数 。
      * 方法名 constructor 会告诉解释器在使用 new 操作符创建类的新实例时，应该调用这个函数。
      * */
+    // 类中的constructor是一个特殊的方法，用于创建和初始化类的实例。
     constructor(executor) {
         //立即执行
         executor(this.resolve, this.reject)
@@ -59,7 +60,7 @@ class MyPromise {
                 resolve(x);
                 // successCallback(this.value)
             } else if (this.state === REJECTED) {
-                failCallback(this.reason)
+                failCallback(this.reason);
             } else {
                 //等待
                 //将成功回调和失败回调存储起来

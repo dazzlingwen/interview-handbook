@@ -15,11 +15,12 @@ Array.prototype.insertSort = function () {
             }
             j--;
         }
+        console.log(this);
         this[j] = temp;
     }
 };
 let arr = [5, 4, 3, 2, 1];
-let arr1=[3,2,5,6,2,7];
+let arr1 = [3, 2, 5, 6, 2, 7];
 arr.insertSort();
 arr1.insertSort();
 console.log(arr)
